@@ -182,11 +182,7 @@ console.log(bankAccountTwo)
 
 // 1. 
 
-Elements
 
-// 2. 
-
-No
 
 // 3. 
 
@@ -333,7 +329,7 @@ const thomsCloset = [
 
 // 1. 
 //misspelled - vs code is giving you a clue with 3 white dots  kristynsCloset
-console.log("Kristyn is rocking that " + krystynsCloset[2] + " today!")
+console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!")
 
 // 2. 
 
@@ -414,12 +410,12 @@ let isVowel = function (vowel) {
 
 // E. getTwoLengths 
 
-//let arr = []
+let arrLengths = []
 
 let getTwoLengths = function(stringone, stringtwo) {
-  arr.push(stringone.length)
-  arr.push(stringtwo.length)
-  return arr
+  arrLengths.push(stringone.length)
+  arrLengths.push(stringtwo.length)
+  return arrLengths
 }
 
 console.log(getTwoLengths("Hank", "Hippopopalous"))
@@ -457,7 +453,6 @@ if (varOne > varTwo && varOne > varThree) {
 
 console.log(largest)
 
-H. printLongestWord
 
 let arr = ["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]
 let longestWord = []
