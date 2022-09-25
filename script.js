@@ -1,4 +1,6 @@
-// A.
+//Try using const for variable that won't change like arrays will always be an array, same with functions. Let is purely used for variable that you know will change.
+
+
 
 // 1. How do we assign a value to a variable? 
 
@@ -42,7 +44,6 @@ console.log(secondVariable)
 
 console.log(firstVariable)
 
-The first variable is equal to 11
 
 // 2. 
 
@@ -66,6 +67,11 @@ console.log(true || false);
 console.log(false || false || false || false && false || true);
 console.log(false == false)
 console.log(e == 'Kevin');
+
+//with arithmetic
+//   console.log(a + b === c); 
+//   console.log(a * a === d); 
+
 console.log(a !== b !== c); // note: a < b < c is NOT CORRECT (and is not a valid JS expression, think about using other math operations)
 console.log(a == a !== d); // note: the answer is a simple arithmetic equation, not something "weird"
 console.log(48 !== '48');
@@ -184,13 +190,14 @@ No
 
 // 3. 
 
-Types of food
+
 
 // B.
 
 // 1. 
+//if you use single quotes you have to comment out the internal quotes with \ see below
 
-let quotes = ['Luke I am your father', 'Hello there', 'It's Morbin' time']
+let quotes = ['Luke I am your father', 'Hello there', 'It\'s Morbin\' time']
 
 // C.
  
@@ -217,7 +224,8 @@ const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"]
 console.log(ourClass[2])
 
 // 2. 
-
+//you can get the last element of an array like this too
+//ourClass[ourClass.length - 1] = 'Octocat';
 ourClass[4] = 'Octocat'
 
 // 3.
@@ -263,12 +271,12 @@ console.log(myArray)
 // 1. 
 
 // 2. 
-
+//error because you already declared number elsewhere
 let number = 99
-
+//else doesn't get an argument
 if (number < 100) {
   console.log('little number')
-} else (number >= 100) {
+} else {
     console.log('beeg number')
 }
 
@@ -279,8 +287,8 @@ if (number < 100) {
 // 2. 
 
 // 3. 
-
-let number = 11 
+//removed let to remove error
+number = 11 
 
 if (number < 5) {
   console.log('little number')
@@ -324,7 +332,7 @@ const thomsCloset = [
 ];
 
 // 1. 
-
+//misspelled - vs code is giving you a clue with 3 white dots  kristynsCloset
 console.log("Kristyn is rocking that " + krystynsCloset[2] + " today!")
 
 // 2. 
@@ -353,6 +361,9 @@ console.log(thomsCloset[2][1])
 
 // 7. 
 
+//template literals might make your life easier
+//console.log(`Thom is looking fierce in a ${thomsCloset[0][0]}, ${thomsCloset[1]}, and a ${thomsCloset[2][1]}`)
+
 console.log("Thom is looking fierce in a " + thomsCloset[0][0] + ", " + thomsCloset[1][1] + " and " + thomsCloset[2][1])
 
 // 8. 
@@ -379,8 +390,10 @@ let printCool = function(name) {
 console.log(printCool('Cody'))
 
 // C. calculateCube
+//return would probably be a better use for this function
 
-let calculateCube = function(number) {
+const calculateCube = function (number) {
+  return number*number*number
   console.log(number * number * number)
 }
 
@@ -388,7 +401,9 @@ console.log(calculateCube(5))
 
 // D. isVowel
 
-let isVowel = function(vowel) {
+let isVowel = function (vowel) {
+  //maybe make a variable to handle user input of captial vowels
+  // const lowerCase = vowel.toLowerCase()
   if (vowel == 'a' || vowel == 'e' || vowel == 'i' || vowel == 'o' || vowel == 'u') {
     return true
   } else {
@@ -399,7 +414,7 @@ let isVowel = function(vowel) {
 
 // E. getTwoLengths 
 
-let arr = []
+//let arr = []
 
 let getTwoLengths = function(stringone, stringtwo) {
   arr.push(stringone.length)
@@ -411,7 +426,7 @@ console.log(getTwoLengths("Hank", "Hippopopalous"))
 
 // F. getMultipleLengths
 
-let arr = ["hello", "what", "is", "up", "dude"]
+let arr1 = ["hello", "what", "is", "up", "dude"]
 let arrOfNumbers = []
 let getMultipleLengths = function(arr) {
   for (let i = 0; i < arr.length; i++) {
@@ -420,9 +435,10 @@ let getMultipleLengths = function(arr) {
   return arrOfNumbers
 }
 
-console.log(getMultipleLengths(arr));
+console.log(getMultipleLengths(arr1));
 
 // G. maxOfThree 
+//this should be refactored into a function
 
 let varOne = 6
 let varTwo = 9
@@ -463,10 +479,10 @@ console.log(printLongestWord(arr));
 // 1. 
 
 // 2. 
-
+//missing comma, cause error
 let user = {
 name: 'Cody',
-email: 'hello@gmail.com'
+email: 'hello@gmail.com',
 age: 28,
 purchased: [],
 }
@@ -545,7 +561,7 @@ console.log(user.friend.purchased[1])
 // 1.
 
 for(let i = 0; i < user.purchased.length; i++) {
-  console.log(user.purchased[i])}
+  console.log(user.purchased[i])
 }
 
 // 2.
@@ -579,29 +595,3 @@ console.log(user)
 
 console.log(user.friend)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-*/
